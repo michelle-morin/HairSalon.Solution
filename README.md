@@ -24,6 +24,10 @@ _This application allows an owner of a hair salon (Eau Claire's Salon) to help m
 | The owner can delete stylists that no longer work at the salon. It is assumed that clients of that stylist will follow the stylist to another salon, and thus deleting a stylist also deletes all associated clients | owner selects "delete stylist" option on '/stylists/{id}' then confirms deletion | application deletes stylist and all clients associated with that stylist from the database |
 | The owner can delete specific client from salon's list of clientele | owner selects "delete client" option on client details page ('/clients/{id}') then confirms deletion | application removes client from clients table of database |
 | The owner can edit detais for a particular stylist | owner selects 'EDIT DETAILS' button on '/stylists/{id}' page | application redirects to form for editing stylist details, and updates values for stylist properties when form is submitted |
+| A user can add appointments for a particular stylist | user selects 'SCHEDULE APPOINTMENT' link on '/stylists' page | application redirects to a form for scheduling an appointment with a particular stylist |
+| When user submits the new appointment form, a new Appointment object is saved as a new row of the appointments table of the michelle_morin database and appointment details are displayed on corresponding stylist's details page | user submits new appointment form | new appointment saved in database and appointment details displayed on '/stylists/{id}' page |
+| Application redirects to error page when user inputs appointment date in invalid format and/or does not complete all form fields of new appointment form | user enters date in format DD-MM-YYYY | the application redirects to '/Appointments/Error' and displays error message "invalid input" |
+| Application redirects to error page when user enters appointment date and/or time that is unavailable for a selected stylist | user enters "04/05/2020" and "1:00 PM", and Appointments table inclues an appointment for that stylist on 04/05/2020 at 1:00 PM | the application redirects to 'Appointments/Error' and displays error message "please select another date and/or time" |
 
 ## Setup/Installation Requirements
 
@@ -95,6 +99,13 @@ _Recreate the ``michelle_morin`` database using the following MySQL commands (in
   `Notes` varchar(255) DEFAULT NULL,
   `StylistId` INT NULL DEFAULT 0,
   PRIMARY KEY (`ClientId`));
+* CREATE TABLE `michelle_morin`.`appointments` (
+  `AppointmentId` INT NOT NULL AUTO_INCREMENT,
+  `Date` VARCHAR(255) NULL,
+  `Time` VARCHAR(255) NULL,
+  `Notes` VARCHAR(255) NULL,
+  `StylistId` INT NULL DEFAULT 0,
+  PRIMARY KEY (`AppointmentId`));
 
 _Run this application by entering the following command in Terminal (macOS) or PowerShell (Windows):_
 * ``cd HairSalon``
