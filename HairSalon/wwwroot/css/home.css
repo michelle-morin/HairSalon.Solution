@@ -1,0 +1,48 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url("/img/hairsalon.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+}
+
+#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  background:#2b1d0e;
+  color: #b7e1fc;
+  padding:8px;
+}
+
+.render-body {
+  background-color: #f5f5f598;
+  margin-top: 15%;
+  border-radius: 15%;
+  padding: 2%;
+}
+
+.btn {
+  border: 1px solid #2b1d0e;
+  width: 40%;
+  background-color: transparent;
+  color: #111111;
+  margin-top: 2%;
+  padding: 1%;
+}
+
+.btn:hover {
+  background-color: #b7e1fc;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  text-align: center;
+}
