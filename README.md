@@ -21,6 +21,8 @@ _This application allows an owner of a hair salon (Eau Claire's Salon) to help m
 | If owner visits '/stylists/{id}', the application displays a list of clients belonging to a specific stylist | owner clicks on specific stylist in list at '/stylists' | the application redirects to '/stylists/{id}' to display details for that stylist and all clients for that stylist |
 | Owner can add clients to a specific stylists' list of clients | owner clicks "add new client" on '/stylists/{id}' page | the application redirects to a form for adding a new client |
 | If the owner submits the new client form, the client is added as a new row of the clients table | owner submits form at '/clients/new' | application adds new client to list of clients associated with specific stylist, and creates new client row in clients table of michelle_morin database |
+| The owner can delete stylists that no longer work at the salon. It is assumed that clients of that stylist will follow the stylist to another salon, and thus deleting a stylist also deletes all associated clients | owner selects "delete stylist" option on '/stylists/{id}' then confirms deletion | application deletes stylist and all clients associated with that stylist from the database |
+| The owner can delete specific client from salon's list of clientele | owner selects "delete client" option on client details page ('/clients/{id}') then confirms deletion | application removes client from clients table of database |
 
 ## Setup/Installation Requirements
 
