@@ -44,9 +44,17 @@ body {
   padding: 2%;
 }
 
-h1, h4 {
+h4 {
   text-align: center;
   color: #013220;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bolder;
+  color: #C0D37A;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #013220;
 }
 
 .btn {
