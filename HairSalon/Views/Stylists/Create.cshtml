@@ -14,8 +14,8 @@
     @Html.LabelFor(model => model.Specialty)
     @Html.TextBoxFor(model => model.Specialty)
     <br>
-    <input type="submit" id="new-stylist" value="ADD STYLIST" />
+    <input type="submit" class="btn-block" value="ADD STYLIST" />
   }
   <br>
-  @Html.ActionLink("RETURN TO ALL STYLISTS", "Index", "Stylists",  null, new { @class = "btn" })
+  @Html.ActionLink("RETURN TO ALL STYLISTS", "Index", "Stylists",  null, new { @class = "btn-block" })
 </div>
