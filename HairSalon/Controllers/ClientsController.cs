@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 
 namespace HairSalon.Controllers
 {
@@ -25,8 +26,23 @@ namespace HairSalon.Controllers
 
     public ActionResult Create()
     {
-      ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
-      return View();
+      try
+      {
+        List<Stylist> stylists = _db.Stylists.ToList();
+        if (stylists.Count >= 1)
+        {
+          ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
+          return View();
+        }
+        else
+        {
+          throw new System.InvalidOperationException("There are currently no stylists available for new clients.");
+        }
+      }
+      catch (Exception ex)
+      {
+        return View("Error", ex.Message);
+      }
     }
 
     [HttpPost]
