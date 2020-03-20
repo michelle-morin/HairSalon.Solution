@@ -1,5 +1,5 @@
 body {
-  font-family: 'Architects Daughter', cursive;
+  font-family: 'Annie Use Your Telescope', cursive;
   background-image: url("/img/hairsalon.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -19,8 +19,8 @@ body {
 }
 
 h1 {
-  font-family: 'Architects Daughter', cursive;
   text-align: center;
+  font-size: 3em;
 }
 
 .render-body {
@@ -37,6 +37,8 @@ h1 {
   color: #111111;
   margin-top: 2%;
   padding: 1%;
+  font-size: large;
+  font-weight: bold;
 }
 
 .btn:hover {
