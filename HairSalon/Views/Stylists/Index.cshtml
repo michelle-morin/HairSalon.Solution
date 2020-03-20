@@ -17,4 +17,7 @@
   <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
 }
 
-@Html.ActionLink("ADD NEW STYLIST", "Create", "Stylists", null, new { @class = "btn-block" })
+<div class="stylist-index-buttons">
+  @Html.ActionLink("ADD NEW STYLIST", "Create", "Stylists", null, new { @class = "btn" })
+  @Html.ActionLink("SCHEDULE APPOINTMENT", "Create", "Appointments", null, new { @class = "btn" })
+</div>
