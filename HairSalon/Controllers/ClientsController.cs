@@ -48,9 +48,23 @@ namespace HairSalon.Controllers
     [HttpPost]
     public ActionResult Create(Client client)
     {
-      _db.Clients.Add(client);
-      _db.SaveChanges();
-      return RedirectToAction("Index");
+      try
+      {
+        if (String.IsNullOrWhiteSpace(client.Name) || String.IsNullOrWhiteSpace(client.Notes))
+        {
+          throw new System.InvalidOperationException("Invalid input");
+        }
+        else
+        {
+          _db.Clients.Add(client);
+          _db.SaveChanges();
+          return RedirectToAction("Index");
+        }
+      }
+      catch (Exception ex)
+      {
+        return View("Error", ex.Message);
+      }
     }
 
     public ActionResult Details(int id)
