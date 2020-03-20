@@ -28,15 +28,27 @@ namespace HairSalon.Controllers
     {
       try
       {
-        if (String.IsNullOrWhiteSpace(appointment.Date) || String.IsNullOrWhiteSpace(appointment.Time) || String.IsNullOrWhiteSpace(appointment.Notes))
+        if (String.IsNullOrWhiteSpace(appointment.Date) || String.IsNullOrWhiteSpace(appointment.Notes))
         {
           throw new System.InvalidOperationException("Invalid input");
         }
-        else
+        else if (Validation.CheckDateFormat(appointment.Date) == 1)
         {
+          List<Appointment> existingAppts = _db.Appointments.Where(appt => appt.StylistId == appointment.StylistId).ToList();
+          for (int i=0; i< existingAppts.Count; i++)
+          {
+            if (existingAppts[i].Date == appointment.Date || existingAppts[i].Time == appointment.Time)
+            {
+              throw new System.InvalidOperationException("Selected date and/or time unavailable. Please try again.");
+            }
+          }
           _db.Appointments.Add(appointment);
           _db.SaveChanges();
           return RedirectToAction("Index", "Stylists");
+        }
+        else
+        {
+          throw new System.InvalidOperationException("Invalid date format. Please try again.");
         }
       }
       catch (Exception ex)

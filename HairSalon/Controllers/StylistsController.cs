@@ -54,7 +54,7 @@ namespace HairSalon.Controllers
     {
       Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       thisStylist.Clients = _db.Clients.Where(client => client.StylistId == id).ToList();
-      thisStylist.Appointments = _db.Appointments.Where(appointment => appointment.StylistId == id).ToList();
+      thisStylist.Appointments = _db.Appointments.Where(appointment => appointment.Stylist.Name == thisStylist.Name).ToList();
       return View(thisStylist);
     }
 
