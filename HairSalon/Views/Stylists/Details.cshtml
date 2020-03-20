@@ -5,10 +5,9 @@
 @using HairSalon.Models;
 @model HairSalon.Models.Stylist;
 
-<h1>STYLIST DETAILS</h1>
+<h1>@Html.DisplayFor(model => model.Name)</h1>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
-
+<h4>@Html.DisplayNameFor(model => model.Specialty): @Html.DisplayFor(model => model.Specialty)</h4>
 @if (@Model.Clients.Count == 0)
 {
   <p>no clients found</p>
@@ -22,6 +21,8 @@
   </ul>
 }
 
-<a href="/Clients/Create" class="btn">ADD CLIENT</a>
-@Html.ActionLink("DELETE STYLIST", "Delete", "Stylists", new { id = Model.StylistId }, new { @class = "btn" })
-@Html.ActionLink("SHOW ALL STYLISTS", "Index", "Stylists", null, new { @class = "btn" })
+<div class="stylist-buttons">
+  <a href="/Clients/Create" class="btn">ADD CLIENT</a>
+  @Html.ActionLink("DELETE STYLIST", "Delete", "Stylists", new { id = Model.StylistId }, new { @class = "btn" })
+  @Html.ActionLink("SHOW ALL STYLISTS", "Index", "Stylists", null, new { @class = "btn" })
+</div>
