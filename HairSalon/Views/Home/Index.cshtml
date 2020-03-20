@@ -3,5 +3,7 @@
 }
 
 <h1>Eau Claire's Salon</h1>
-  @Html.ActionLink("STYLISTS", "Index", "Stylists", null, new { @class = "btn btn-block" })
-  @Html.ActionLink("CLIENTELE", "Index", "Clients", null, new { @class = "btn btn-block" })
+<div class="home-buttons">
+  @Html.ActionLink("STYLISTS", "Index", "Stylists", null, new { @class = "btn" })
+  @Html.ActionLink("CLIENTELE", "Index", "Clients", null, new { @class = "btn" })
+</div>
