@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Architects Daughter', cursive;
   background-image: url("/img/hairsalon.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -16,6 +16,11 @@ body {
   background:#2b1d0e;
   color: #b7e1fc;
   padding:8px;
+}
+
+h1 {
+  font-family: 'Architects Daughter', cursive;
+  text-align: center;
 }
 
 .render-body {
@@ -41,8 +46,4 @@ body {
 .home-buttons {
   display: flex;
   justify-content: space-around;
-}
-
-h1 {
-  text-align: center;
 }
