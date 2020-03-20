@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Stylist
+
+<h1>DELETE THIS STYLIST?</h1>
+<h4>@Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+  <input type="submit" value="CONFIRM DELETION" class="btn-block"/>
+}
+
+@Html.ActionLink("SHOW ALL STYLISTS", "Index", "Stylists", null, new { @class = "btn-block" })
