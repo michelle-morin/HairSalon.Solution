@@ -8,20 +8,21 @@
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Date)
-  @Html.EditorFor(model => model.Date, new { @type = "date" })
+  @Html.TextBoxFor(model => model.Date, new { placeholder = "DD/MM/YYYY" })
+  @Html.ValidationMessageFor(model => model.Date)
   <br>
   @Html.LabelFor(model => model.Time)
-  @Html.DropDownList("AvailableTimes", new List<SelectListItem>
+  @Html.DropDownList("Time", new List<SelectListItem>
   { 
-    new SelectListItem { Text = "10:00 AM", Value = "10:00 AM", Selected=true},
-    new SelectListItem { Text = "11:00 AM", Value = "11:00 AM"},
-    new SelectListItem { Text = "12:00 PM", Value = "12:00 PM"},
-    new SelectListItem { Text = "1:00 PM", Value = "1:00 PM"},
-    new SelectListItem { Text = "2:00 PM", Value = "2:00 PM"},
-    new SelectListItem { Text = "3:00 PM", Value = "3:00 PM"},
-    new SelectListItem { Text = "4:00 PM", Value = "4:00 PM"},
-    new SelectListItem { Text = "5:00 PM", Value = "5:00 PM"},
-    new SelectListItem { Text = "6:00 PM", Value = "6:00 PM"}
+    new SelectListItem { Text = "10:00 AM", Value = "10:00 AM" },
+    new SelectListItem { Text = "11:00 AM", Value = "11:00 AM" },
+    new SelectListItem { Text = "12:00 PM", Value = "12:00 PM" },
+    new SelectListItem { Text = "1:00 PM", Value = "1:00 PM" },
+    new SelectListItem { Text = "2:00 PM", Value = "2:00 PM" },
+    new SelectListItem { Text = "3:00 PM", Value = "3:00 PM" },
+    new SelectListItem { Text = "4:00 PM", Value = "4:00 PM" },
+    new SelectListItem { Text = "5:00 PM", Value = "5:00 PM" },
+    new SelectListItem { Text = "6:00 PM", Value = "6:00 PM" }
   })
   <br>
   @Html.LabelFor(model => model.Notes)
@@ -29,5 +30,5 @@
   <br>
   @Html.LabelFor(model => model.Stylist)
   @Html.DropDownList("StylistId")
-  <input type="submit" value="ADD CLIENT" class="btn-block" />
+  <input type="submit" value="BOOK MY APPOINTMENT" class="btn-block" />
 }

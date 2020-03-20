@@ -25,7 +25,7 @@
 @if (@Model.Appointments.Count > 0)
 {
   <h4>UPCOMING APPOINTMENTS</h4>
-  <ul>
+  <div class="appts">
     @foreach (Appointment appointment in @Model.Appointments)
     {
       <div class="appointment">
@@ -34,7 +34,7 @@
         <p>NOTES: @appointment.Notes</p>
       </div>
     }
-  </ul>
+  </div>
 }
 
 <div class="stylist-buttons">
