@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* background-image: url("/img/BreadImg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%; */
+}
+
+#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:#f5f5f5;
+  background:rgb(20, 144, 158);
+  padding:8px;
+}
+
+.render-body {
+  margin-top: 15%;
+  border: 2px solid #f5f5f5;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  border: 1px solid #f5f5f5;
+  width: 40%;
+}
