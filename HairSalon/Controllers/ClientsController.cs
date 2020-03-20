@@ -39,7 +39,7 @@ namespace HairSalon.Controllers
 
     public ActionResult Details(int id)
     {
-      Restaurant thisClient = _db.Clients.FirstOrDefault(clients => clients.ClientId == id);
+      Client thisClient = _db.Clients.FirstOrDefault(clients => clients.ClientId == id);
       return View(thisClient);
     }
 
