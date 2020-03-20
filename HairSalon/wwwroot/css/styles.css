@@ -90,12 +90,14 @@ h1, h4 {
 }
 
 li {
-  margin-left: 38%;
-  list-style-type: circle;
+  margin-left: -4%;
+  text-align: center;
+  list-style-type: none;
   font-size: large;
 }
 
 li a {
+  text-align: center;
   color: #111111;
 }
 
