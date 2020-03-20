@@ -37,7 +37,7 @@ namespace HairSalon.Controllers
           List<Appointment> existingAppts = _db.Appointments.Where(appt => appt.StylistId == appointment.StylistId).ToList();
           for (int i=0; i< existingAppts.Count; i++)
           {
-            if (existingAppts[i].Date == appointment.Date || existingAppts[i].Time == appointment.Time)
+            if (existingAppts[i].Date == appointment.Date && existingAppts[i].Time == appointment.Time)
             {
               throw new System.InvalidOperationException("Selected date and/or time unavailable. Please try again.");
             }
