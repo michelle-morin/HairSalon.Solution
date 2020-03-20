@@ -6,7 +6,10 @@
 @model HairSalon.Models.Client
 
 <h1>@Html.DisplayFor(model => model.Name)</h1>
-<p>NOTES: @Html.DisplayFor(model => model.Notes)</p>
+<hr />
+<h4>NOTE: @Html.DisplayFor(model => model.Notes)</h4>
 
-@Html.ActionLink("DELETE CLIENT", "Delete", "Clients", new { id = Model.ClientId }, new { @class = "btn" })
-@Html.ActionLink("SHOW ALL CLIENTS", "Index", "Clients", null, new { @class = "btn" })
+<div class="client-buttons">
+  @Html.ActionLink("DELETE CLIENT", "Delete", "Clients", new { id = Model.ClientId }, new { @class = "btn" })
+  @Html.ActionLink("SHOW ALL CLIENTS", "Index", "Clients", null, new { @class = "btn" })
+</div>
