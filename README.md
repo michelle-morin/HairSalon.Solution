@@ -91,6 +91,7 @@ _Recreate the ``michelle_morin`` database using the following MySQL commands (in
 * CREATE TABLE `michelle_morin`.`clients` (
   `ClientId` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(255) NULL,
+  `Notes` varchar(255) DEFAULT NULL,
   `StylistId` INT NULL DEFAULT 0,
   PRIMARY KEY (`ClientId`));
 

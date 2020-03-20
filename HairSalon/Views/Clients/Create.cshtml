@@ -10,6 +10,8 @@
   {
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name)
+    @Html.LabelFor(model => model.Notes)
+    @Html.TextBoxFor(model => model.Notes)
     @Html.LabelFor(model => model.Stylist)
     @Html.DropDownList("StylistId")
     <input type="submit" value="ADD CLIENT" class="btn-block" />
