@@ -80,12 +80,12 @@ h1, h4 {
   text-decoration: none;
 }
 
-.stylist-buttons, .client-buttons {
+.stylist-buttons, .client-buttons, .error-buttons {
   display: flex;
   justify-content: space-around;
 }
 
-.stylist-buttons a {
+.stylist-buttons a, .error-buttons a {
   width: 30%;
 }
 
