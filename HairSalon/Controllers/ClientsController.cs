@@ -19,7 +19,7 @@ namespace HairSalon.Controllers
 
     public ActionResult Index()
     {
-      List<Client> model = _db.Clients.Include(clients => clients.Stylist).ToList();
+      List<Client> model = _db.Clients.ToList();
       model.Sort((x, y) => string.Compare(x.Name, y.Name));
       return View(model);
     }
@@ -56,6 +56,7 @@ namespace HairSalon.Controllers
     public ActionResult Details(int id)
     {
       Client thisClient = _db.Clients.FirstOrDefault(clients => clients.ClientId == id);
+      ViewBag.Stylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == thisClient.StylistId);
       return View(thisClient);
     }
 
