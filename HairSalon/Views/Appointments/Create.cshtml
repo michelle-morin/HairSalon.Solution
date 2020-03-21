@@ -8,7 +8,7 @@
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Date)
-  @Html.TextBoxFor(model => model.Date, new { placeholder = "DD/MM/YYYY" })
+  @Html.TextBoxFor(model => model.Date, new { placeholder = "MM/DD/YYYY" })
   @Html.ValidationMessageFor(model => model.Date)
   <br>
   @Html.LabelFor(model => model.Time)

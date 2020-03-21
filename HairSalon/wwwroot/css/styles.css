@@ -47,11 +47,13 @@ body {
 .appts {
   display: flex;
   flex-flow: row wrap;
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .appointment {
   background-color: transparent;
-  margin: 2%;
+  margin: 1%;
   border: 1px solid #36454f;
   border-radius: 10px;
   padding: 2%;

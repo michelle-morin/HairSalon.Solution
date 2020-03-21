@@ -48,7 +48,7 @@ namespace HairSalon.Controllers
         }
         else
         {
-          throw new System.InvalidOperationException("Invalid date format. Please try again.");
+          throw new System.InvalidOperationException("Invalid date. Please try again.");
         }
       }
       catch (Exception ex)
