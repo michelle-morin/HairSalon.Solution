@@ -97,9 +97,14 @@ namespace HairSalon.Controllers
     {
       Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       thisStylist.Clients = _db.Clients.Where(client => client.StylistId == id).ToList();
+      thisStylist.Appointments = _db.Appointments.Where(appt => appt.StylistId == id).ToList();
       foreach(Client client in thisStylist.Clients)
       {
         _db.Clients.Remove(client);
+      }
+      foreach(Appointment appointment in thisStylist.Appointments)
+      {
+        _db.Appointments.Remove(appointment);
       }
       _db.Stylists.Remove(thisStylist);
       _db.SaveChanges();
