@@ -39,7 +39,8 @@ body {
 
 .render-body {
   background-color: #f5f5f5ab;
-  margin-top: 15%;
+  margin-top: 10%;
+  margin-bottom: 10%;
   border-radius: 10px;
   padding: 2%;
 }
@@ -74,6 +75,7 @@ h1 {
 
 .btn {
   border: 1px solid #36454f;
+  border-radius: 10px;
   width: 40%;
   background-color: transparent;
   color: #111111;
@@ -103,12 +105,22 @@ h1 {
   text-decoration: none;
 }
 
-.stylist-buttons, .client-buttons, .error-buttons, .stylist-index-buttons {
+.client-buttons, .error-buttons, .stylist-index-buttons {
   display: flex;
   justify-content: space-around;
 }
 
-.stylist-buttons a, .error-buttons a {
+.stylist-buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.stylist-buttons a {
+  width: 49%;
+}
+
+.error-buttons a {
   width: 30%;
 }
 

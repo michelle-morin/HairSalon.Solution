@@ -39,6 +39,8 @@
 
 <div class="stylist-buttons">
   <a href="/Clients/Create" class="btn">ADD CLIENT</a>
+  @Html.ActionLink("SCHEDULE APPOINTMENT", "Create", "Appointments", null, new { @class = "btn" })
   @Html.ActionLink("EDIT DETAILS", "Edit", "Stylists", new { id = Model.StylistId }, new { @class = "btn" })
   @Html.ActionLink("DELETE STYLIST", "Delete", "Stylists", new { id = Model.StylistId }, new { @class = "btn" })
 </div>
+@Html.ActionLink("VIEW ALL STYLISTS", "Index", "Stylists", null, new { @class = "btn-block" })
