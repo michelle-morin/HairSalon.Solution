@@ -6,7 +6,7 @@
 
 ## Description
 
-_This application allows an owner of a hair salon (Eau Claire's Salon) to help manage her employees (stylists) and thier clients. The owner can add a list of stylists working at the salon, and for each stylist, add clients who see that stylist. The stylists have specific specialties, so each client is associated with only one stylist._
+_This application allows an owner of a hair salon (Eau Claire's Salon) to help manage her employees (stylists) and their clients. The owner can add a list of stylists working at the salon, and for each stylist, add clients who see that stylist. The stylists have specific specialties, so each client is associated with only one stylist._
 
 ## Specifications:
 
